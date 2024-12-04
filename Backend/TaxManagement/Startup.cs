@@ -57,15 +57,14 @@ namespace TaxManagement
                 }
                 app.UseStaticFiles();
                 app.UseCors();
-                app.UseHttpsRedirection();
+                // app.UseHttpsRedirection();
                 app.UseRouting();
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Test1 Api v1");
                 });
-                app.UseAuthorization();
-
+                // app.UseAuthorization();
                 app.UseEndpoints(endpoints =>
                 {
                     endpoints.MapControllers();
